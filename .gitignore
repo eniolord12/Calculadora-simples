@@ -1,129 +1,66 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+#A definição de cada função - calculos de\/
+#Adição, subtração, multiplicação, divisão
+def adição(n1,n2):
+    resultado=n1+n2
+    return resultado
+def subtração(n1,n2):
+    resultado=n1-n2
+    return resultado
+def multiplicação(n1,n2):
+    resultado=n1*n2
+    return resultado
+def divisão(n1,n2):
+    resultado=n1/n2
+    return resultado
+def potência(n1,n2):
+    resultado=n1**n2
+    return resultado
 
-# C extensions
-*.so
+#Ira imprimir a frase inicial do projeto
+print('Seja bem vindo ao teste da calculadora!')
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+#enquanto for escrito "S" ao final do processo, ele reiniciara
+control = True
+while(control==True):
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+#Função da incersão dos nº
+    n1 = float(input('Insira o primeiro nº:'))
+    n2 = float(input('Insira o segundo nº:'))
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+#Função String onde ira mostras quais opções se tem para inserir
+    print('Selecione uma das operações:')
+    operador = int(input('1) Adição \n2) Subtração \n3) Multiplicação \n4) Divisão \n5) Potência \nR.:'))
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
+#Dando funcionalida ao texto acima
+#Fara a ação de acordo com o numero seleciondo
+    if(operador == 1):
+        adição = adição(n1,n2)
+        print('{} + {} ='.format(n1,n2))
+        print(n1+n2)
+    if(operador == 2):
+        subtração = subtração(n1,n2)
+        print('{} - {} ='.format(n1, n2))
+        print(n1 - n2)
+    if(operador == 3):
+        multiplicação = multiplicação(n1,n2)
+        print('{} * {} ='.format(n1, n2))
+        print(n1 * n2)
+    if(operador == 4):
+        divisão = divisão(n1,n2)
+        print('{} / {} ='.format(n1, n2))
+        print(n1 / n2)
+    if (operador == 5):
+        potência = potência(n1, n2)
+        print('{} ^ {} ='.format(n1, n2))
+        print(n1 ** n2)
 
-# Translations
-*.mo
-*.pot
+#Oque acontecera caso o função selecionada seja inesistente
+    if(operador >5):
+        print('Por favor, digite um valor entra 1 à 5, reinicie a operação.')
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
+#Ação para reiniciar o fizalizar processo
+    control2 = input('Deseja continuar? s/n \n R.:')
+    if(control2.upper()=='S'):
+        control = True
+    else:
+        control = False
