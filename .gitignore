@@ -1,5 +1,6 @@
+#CALCULADORA QUE REALIZA FUNÇÂOES BASICAS COMO: ADIÇÂO, SUBTRAÇÃo, MULTIPLICAÇÃO, DIVISÃO, POTÊNCIA
 #A definição de cada função - calculos de\/
-#Adição, subtração, multiplicação, divisão
+#Adição, subtração, multiplicação, divisão, potência
 def adição(n1,n2):
     resultado=n1+n2
     return resultado
